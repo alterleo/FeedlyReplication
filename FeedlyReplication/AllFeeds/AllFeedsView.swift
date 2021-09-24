@@ -9,7 +9,7 @@ import UIKit
 import PinLayout
 
 class AllFeedsView: UIView {
-    let mainTable = UITableView()
+    var mainTable = UITableView(frame: CGRect.zero, style: .grouped)
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -18,6 +18,7 @@ class AllFeedsView: UIView {
         addSubview(mainTable)
         mainTable.separatorStyle = .none
         mainTable.allowsSelection = false
+        mainTable.backgroundColor = .white
     }
     
     required init?(coder: NSCoder) {

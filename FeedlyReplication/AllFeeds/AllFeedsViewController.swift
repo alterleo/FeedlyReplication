@@ -19,7 +19,7 @@ class AllFeedsViewController: UIViewController {
     public override func loadView() {
         view = mainView
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUi()
@@ -39,9 +39,10 @@ class AllFeedsViewController: UIViewController {
         mainView.mainTable.delegate = self
         mainView.mainTable.dataSource = self
         mainView.mainTable.register(AllFeedsCell.self, forCellReuseIdentifier: AllFeedsCell.cellId)
+        mainView.mainTable.register(AllFeedsSectionHeaderView.self, forHeaderFooterViewReuseIdentifier: AllFeedsSectionHeaderView.sectionHeaderId)
     }
-
-
+    
+    
 }
 
 // MARK: AllFeedsViewControllerProtocol
@@ -52,7 +53,7 @@ extension AllFeedsViewController: AllFeedsViewControllerProtocol {
     }
 }
 
-
+// MARK: UITableViewDelegate, UITableViewDataSource
 extension AllFeedsViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -65,5 +66,13 @@ extension AllFeedsViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        
+        guard let view = tableView.dequeueReusableHeaderFooterView(withIdentifier: AllFeedsSectionHeaderView.sectionHeaderId) as? AllFeedsSectionHeaderView else { return UIView() }
+                
+        view.configure(text: "Today")
+        
+        return view
+    }
     
 }

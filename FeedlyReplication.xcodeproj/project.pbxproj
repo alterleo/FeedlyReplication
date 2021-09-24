@@ -23,6 +23,7 @@
 		FA37F17326FC9869008FB31D /* AllFeedsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA37F17226FC9869008FB31D /* AllFeedsPresenter.swift */; };
 		FA37F17526FC996F008FB31D /* AllFeedsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA37F17426FC996F008FB31D /* AllFeedsModel.swift */; };
 		FA37F17726FCAA48008FB31D /* AllFeedsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA37F17626FCAA48008FB31D /* AllFeedsCell.swift */; };
+		FA37F17926FDFB36008FB31D /* AllFeedsSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA37F17826FDFB35008FB31D /* AllFeedsSectionHeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		FA37F17226FC9869008FB31D /* AllFeedsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllFeedsPresenter.swift; sourceTree = "<group>"; };
 		FA37F17426FC996F008FB31D /* AllFeedsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllFeedsModel.swift; sourceTree = "<group>"; };
 		FA37F17626FCAA48008FB31D /* AllFeedsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllFeedsCell.swift; sourceTree = "<group>"; };
+		FA37F17826FDFB35008FB31D /* AllFeedsSectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllFeedsSectionHeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +161,7 @@
 				FA37F17226FC9869008FB31D /* AllFeedsPresenter.swift */,
 				FA37F17426FC996F008FB31D /* AllFeedsModel.swift */,
 				FA37F17626FCAA48008FB31D /* AllFeedsCell.swift */,
+				FA37F17826FDFB35008FB31D /* AllFeedsSectionHeaderView.swift */,
 			);
 			path = AllFeeds;
 			sourceTree = "<group>";
@@ -303,6 +306,7 @@
 				FA37F17726FCAA48008FB31D /* AllFeedsCell.swift in Sources */,
 				FA37F16726FB5255008FB31D /* ReadLaterViewController.swift in Sources */,
 				FA37F14626FB416D008FB31D /* AppDelegate.swift in Sources */,
+				FA37F17926FDFB36008FB31D /* AllFeedsSectionHeaderView.swift in Sources */,
 				FA37F16B26FB5278008FB31D /* PowerSearchViewController.swift in Sources */,
 				FA37F16E26FC7CC7008FB31D /* UIColorExtension.swift in Sources */,
 				FA37F17326FC9869008FB31D /* AllFeedsPresenter.swift in Sources */,
