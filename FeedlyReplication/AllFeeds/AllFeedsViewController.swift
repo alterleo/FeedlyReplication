@@ -39,8 +39,6 @@ class AllFeedsViewController: UIViewController {
         mainView.mainTable.delegate = self
         mainView.mainTable.dataSource = self
         mainView.mainTable.register(AllFeedsCell.self, forCellReuseIdentifier: AllFeedsCell.cellId)
-//        mainView.mainTable.rowHeight = UITableView.automaticDimension
-//        mainView.mainTable.estimatedRowHeight = 100
     }
 
 
@@ -56,13 +54,6 @@ extension AllFeedsViewController: AllFeedsViewControllerProtocol {
 
 
 extension AllFeedsViewController: UITableViewDelegate, UITableViewDataSource {
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        return UITableView.automaticDimension
-//    }
-//
-//    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-//        return UITableView.automaticDimension
-//    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         presenter.allFeeds.count
@@ -70,25 +61,7 @@ extension AllFeedsViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: AllFeedsCell.cellId, for: indexPath) as! AllFeedsCell
-//        let cell = UITableViewCell()
-//        cell.textLabel?.numberOfLines = 0
         cell.configure(feed: presenter.allFeeds[indexPath.row])
-//        let feed = presenter.allFeeds[indexPath.row]
-//        let string1 = NSAttributedString(string: feed.title, attributes: [
-//            NSAttributedString.Key.font: UIFont(name: "Arial-BoldMT", size: 15)!,
-//            NSAttributedString.Key.foregroundColor: UIColor.black
-//        ])
-//
-//        let string2 = NSAttributedString(string: " / " + feed.source + " / " + feed.time, attributes: [
-//            NSAttributedString.Key.font : UIFont(name: "ArialMT", size: 13)!,
-//            NSAttributedString.Key.foregroundColor: UIColor.gray
-//        ])
-//
-//        let text = NSMutableAttributedString()
-//        text.append(string1)
-//        text.append(string2)
-//        cell.textLabel?.attributedText = text
-//        feed.title + " / " + feed.source + " / " + feed.time
         return cell
     }
     

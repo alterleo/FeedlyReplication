@@ -19,7 +19,6 @@ class AllFeedsCell: UITableViewCell {
         contentView.addSubview(mainText)
         mainText.numberOfLines = 0
         mainText.lineBreakMode = .byTruncatingTail
-        
     }
     
     required init?(coder: NSCoder) {
